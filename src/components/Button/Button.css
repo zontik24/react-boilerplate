@@ -1,0 +1,11 @@
+.btn {
+    background: #a66cdd;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.btn:hover {
+    background: aquamarine;
+}
