@@ -1,4 +1,5 @@
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
     entry: './src/index.tsx',
@@ -9,7 +10,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.(ts|tsx)?$/,
                 loader: "awesome-typescript-loader"
             },
             {
@@ -32,6 +33,11 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.WatchIgnorePlugin([
+            /css\.d\.ts$/
+        ])
+    ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
